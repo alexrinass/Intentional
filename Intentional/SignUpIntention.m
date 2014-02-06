@@ -22,9 +22,8 @@
     return valid;
 }
 
-- (IBAction)saveTapped:(id)sender {
-    [self.personProxy.person setValue:self.email forKey:@"email"];
-    [self.personProxy.person.managedObjectContext save:nil];
+- (BOOL)save:(NSError *__autoreleasing *)error {
+    return [self.personProxy.person.managedObjectContext save:error];
 }
 
 @end

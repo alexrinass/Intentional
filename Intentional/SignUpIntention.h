@@ -12,6 +12,6 @@
 @property (nonatomic) NSString *email;
 
 - (BOOL)validate:(NSError * __autoreleasing *)error;
-- (IBAction)saveTapped:(id)sender;
+- (BOOL)save:(NSError * __autoreleasing *)error;
 
 @end

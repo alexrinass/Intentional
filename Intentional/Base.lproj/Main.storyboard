@@ -47,7 +47,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="saveTapped:" destination="kLz-XJ-1jr" eventType="touchUpInside" id="wIt-FZ-NEJ"/>
+                                    <action selector="saveTapped:" destination="IJE-Fp-FGY" eventType="touchUpInside" id="ORg-Bo-eSp"/>
                                 </connections>
                             </button>
                         </subviews>

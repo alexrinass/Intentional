@@ -17,30 +17,10 @@
 @property (weak, nonatomic) IBOutlet UIButton *saveButton;
 @end
 
-static NSDictionary *affordances = nil;
-
 @implementation MasterViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
-    affordances =
-        @{NSManagedObjectContextDidSaveNotification: @"personWasSaved:"};
-
-    for (NSString *key in affordances)
-        [self observe:key andPerform:affordances[key]];
-}
-
-- (void)observe:(NSString *)notification
-     andPerform:(NSString *)selectorName {
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:NSSelectorFromString(selectorName)
-                                                 name:notification
-                                               object:self.managedObjectContext];
-}
-
-- (void)dealloc {
-    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 - (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
@@ -59,14 +39,23 @@ static NSDictionary *affordances = nil;
     BOOL valid = [self.signUpIntention validate:&error];
 
     if (!valid) {
-        NSLog(@"Validation failed: %@", [error localizedFailureReason]);
+        NSLog(@"Validation failed: %@", [error localizedDescription]);
     }
 
     [self.saveButton setEnabled:valid];
 }
 
-- (void)personWasSaved:(NSNotification *)note {
-    [self performSegueWithIdentifier:@"advance" sender:note];
+- (IBAction)saveTapped:(id)sender
+{
+    NSError *error = nil;
+    BOOL saved = [self.signUpIntention save:&error];
+
+    if (!saved) {
+        NSLog(@"Save failed: %@", [error localizedDescription]);
+        return;
+    }
+
+    [self performSegueWithIdentifier:@"advance" sender:self];
 }
 
 @end

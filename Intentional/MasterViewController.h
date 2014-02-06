@@ -11,4 +11,7 @@
 
 @interface MasterViewController : UIViewController 
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
+
+- (IBAction)saveTapped:(id)sender;
+
 @end
