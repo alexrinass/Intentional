@@ -37,7 +37,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
-                                    <outlet property="delegate" destination="kLz-XJ-1jr" id="UHm-uZ-2S0"/>
+                                    <outlet property="delegate" destination="IJE-Fp-FGY" id="wNb-Q6-gnf"/>
                                 </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3rr-Ht-nBt">
@@ -57,6 +57,7 @@
                     <connections>
                         <outlet property="personProxy" destination="T0S-ZF-JlM" id="Poj-D3-VLr"/>
                         <outlet property="saveButton" destination="3rr-Ht-nBt" id="acN-z0-OCB"/>
+                        <outlet property="signUpIntention" destination="kLz-XJ-1jr" id="TIZ-fl-wc9"/>
                         <segue destination="IYR-ws-X39" kind="push" identifier="advance" id="jL8-ru-Qfn"/>
                     </connections>
                 </viewController>

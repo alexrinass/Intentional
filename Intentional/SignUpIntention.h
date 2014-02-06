@@ -9,8 +9,9 @@
 #import <Foundation/Foundation.h>
 
 @interface SignUpIntention : NSObject
+@property (nonatomic) NSString *email;
 
-- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string;
+- (BOOL)validate:(NSError * __autoreleasing *)error;
 - (IBAction)saveTapped:(id)sender;
 
 @end

@@ -9,19 +9,21 @@
 #import "SignUpIntention.h"
 #import "PersonProxy.h"
 
-@interface SignUpIntention () <UITextFieldDelegate>
+@interface SignUpIntention () 
 @property (weak, nonatomic) IBOutlet PersonProxy *personProxy;
 @end
 
 @implementation SignUpIntention
 
-- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
-    NSString *newString = [textField.text stringByReplacingCharactersInRange:range withString:string];
-    [self.personProxy.person setValue:newString forKey:@"email"];
-    return YES;
+- (BOOL)validate:(NSError *__autoreleasing *)error
+{
+    [self.personProxy.person setValue:self.email forKey:@"email"];
+    BOOL valid = [self.personProxy.person validateForInsert:error];
+    return valid;
 }
 
 - (IBAction)saveTapped:(id)sender {
+    [self.personProxy.person setValue:self.email forKey:@"email"];
     [self.personProxy.person.managedObjectContext save:nil];
 }
 

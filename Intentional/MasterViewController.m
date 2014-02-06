@@ -9,9 +9,11 @@
 #import "MasterViewController.h"
 
 #import "PersonProxy.h"
+#import "SignUpIntention.h"
 
-@interface MasterViewController ()
+@interface MasterViewController () <UITextFieldDelegate>
 @property (strong, nonatomic) IBOutlet PersonProxy *personProxy;
+@property (strong, nonatomic) IBOutlet SignUpIntention *signUpIntention;
 @property (weak, nonatomic) IBOutlet UIButton *saveButton;
 @end
 
@@ -23,8 +25,7 @@ static NSDictionary *affordances = nil;
     [super viewDidLoad];
 
     affordances =
-        @{NSManagedObjectContextDidSaveNotification: @"personWasSaved:",
-          NSManagedObjectContextObjectsDidChangeNotification: @"emailWasChanged:"};
+        @{NSManagedObjectContextDidSaveNotification: @"personWasSaved:"};
 
     for (NSString *key in affordances)
         [self observe:key andPerform:affordances[key]];
@@ -42,12 +43,26 @@ static NSDictionary *affordances = nil;
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
-- (void)emailWasChanged:(NSNotification *)note {
+- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
+    NSString *newString = [textField.text stringByReplacingCharactersInRange:range withString:string];
+    self.signUpIntention.email = newString;
+    [self emailWasChanged];
+    return YES;
+}
+
+- (void)emailWasChanged {
     [self setEnabledStateForSaveButton];
 }
 
 - (void)setEnabledStateForSaveButton {
-    [self.saveButton setEnabled:[self.personProxy.person validateForInsert:nil]];
+    NSError *error = nil;
+    BOOL valid = [self.signUpIntention validate:&error];
+
+    if (!valid) {
+        NSLog(@"Validation failed: %@", [error localizedFailureReason]);
+    }
+
+    [self.saveButton setEnabled:valid];
 }
 
 - (void)personWasSaved:(NSNotification *)note {
