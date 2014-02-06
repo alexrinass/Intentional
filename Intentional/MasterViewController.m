@@ -31,10 +31,6 @@
 }
 
 - (void)emailWasChanged {
-    [self setEnabledStateForSaveButton];
-}
-
-- (void)setEnabledStateForSaveButton {
     NSError *error = nil;
     BOOL valid = [self.signUpIntention validate:&error];
 
