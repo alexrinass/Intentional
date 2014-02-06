@@ -7,6 +7,8 @@
 //
 
 #import <XCTest/XCTest.h>
+#import "SignUpIntention.h"
+#import "PersonProxy.h"
 
 @interface IntentionalTests : XCTestCase
 
@@ -26,9 +28,15 @@
     [super tearDown];
 }
 
-- (void)testExample
+- (void)testSignUpIntention
 {
-    XCTFail(@"No implementation for \"%s\"", __PRETTY_FUNCTION__);
+    SignUpIntention *signUpIntention = [SignUpIntention new];
+    signUpIntention.personProxy = nil; // We would need a core data stack here...
+    signUpIntention.email = @"info@example.com";
+
+    NSError *error;
+    BOOL validatate = [signUpIntention validate:&error];
+    XCTAssertTrue(validatate, @"%@", error);
 }
 
 @end

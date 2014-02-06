@@ -27,6 +27,8 @@
 		A2FCB35318A1CCCF00459694 /* SignUpIntention.m in Sources */ = {isa = PBXBuildFile; fileRef = A2FCB35218A1CCCF00459694 /* SignUpIntention.m */; };
 		A2FCB35A18A1CD2F00459694 /* PersonProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = A2FCB35918A1CD2F00459694 /* PersonProxy.m */; };
 		A2FCB36018A1D57100459694 /* CoreDataConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = A2FCB35F18A1D57100459694 /* CoreDataConnection.m */; };
+		FA054D9518A38A3B006F588E /* SignUpIntention.m in Sources */ = {isa = PBXBuildFile; fileRef = A2FCB35218A1CCCF00459694 /* SignUpIntention.m */; };
+		FA054D9618A38A3E006F588E /* PersonProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = A2FCB35918A1CD2F00459694 /* PersonProxy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -311,6 +313,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA054D9618A38A3E006F588E /* PersonProxy.m in Sources */,
+				FA054D9518A38A3B006F588E /* SignUpIntention.m in Sources */,
 				A2FCB34618A1CBF900459694 /* IntentionalTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

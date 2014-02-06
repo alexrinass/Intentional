@@ -10,7 +10,7 @@
 
 @class PersonProxy;
 @interface SignUpIntention : NSObject
-@property (weak, nonatomic) IBOutlet PersonProxy *personProxy;
+@property (strong, nonatomic) IBOutlet PersonProxy *personProxy;
 @property (nonatomic) NSString *email;
 
 - (BOOL)validate:(NSError * __autoreleasing *)error;
