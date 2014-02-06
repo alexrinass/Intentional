@@ -24,8 +24,7 @@
 		A2FCB33C18A1CBF900459694 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2FCB31718A1CBF900459694 /* CoreData.framework */; };
 		A2FCB34418A1CBF900459694 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A2FCB34218A1CBF900459694 /* InfoPlist.strings */; };
 		A2FCB34618A1CBF900459694 /* IntentionalTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A2FCB34518A1CBF900459694 /* IntentionalTests.m */; };
-		A2FCB35318A1CCCF00459694 /* EnterEmailIntention.m in Sources */ = {isa = PBXBuildFile; fileRef = A2FCB35218A1CCCF00459694 /* EnterEmailIntention.m */; };
-		A2FCB35618A1CCFE00459694 /* SaveEmailIntention.m in Sources */ = {isa = PBXBuildFile; fileRef = A2FCB35518A1CCFE00459694 /* SaveEmailIntention.m */; };
+		A2FCB35318A1CCCF00459694 /* SignUpIntention.m in Sources */ = {isa = PBXBuildFile; fileRef = A2FCB35218A1CCCF00459694 /* SignUpIntention.m */; };
 		A2FCB35A18A1CD2F00459694 /* PersonProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = A2FCB35918A1CD2F00459694 /* PersonProxy.m */; };
 		A2FCB36018A1D57100459694 /* CoreDataConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = A2FCB35F18A1D57100459694 /* CoreDataConnection.m */; };
 /* End PBXBuildFile section */
@@ -62,10 +61,8 @@
 		A2FCB34118A1CBF900459694 /* IntentionalTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "IntentionalTests-Info.plist"; sourceTree = "<group>"; };
 		A2FCB34318A1CBF900459694 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		A2FCB34518A1CBF900459694 /* IntentionalTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IntentionalTests.m; sourceTree = "<group>"; };
-		A2FCB35118A1CCCF00459694 /* EnterEmailIntention.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnterEmailIntention.h; sourceTree = "<group>"; };
-		A2FCB35218A1CCCF00459694 /* EnterEmailIntention.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EnterEmailIntention.m; sourceTree = "<group>"; };
-		A2FCB35418A1CCFE00459694 /* SaveEmailIntention.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SaveEmailIntention.h; sourceTree = "<group>"; };
-		A2FCB35518A1CCFE00459694 /* SaveEmailIntention.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SaveEmailIntention.m; sourceTree = "<group>"; };
+		A2FCB35118A1CCCF00459694 /* SignUpIntention.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignUpIntention.h; sourceTree = "<group>"; };
+		A2FCB35218A1CCCF00459694 /* SignUpIntention.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignUpIntention.m; sourceTree = "<group>"; };
 		A2FCB35818A1CD2F00459694 /* PersonProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonProxy.h; sourceTree = "<group>"; };
 		A2FCB35918A1CD2F00459694 /* PersonProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonProxy.m; sourceTree = "<group>"; };
 		A2FCB35E18A1D57100459694 /* CoreDataConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataConnection.h; sourceTree = "<group>"; };
@@ -188,10 +185,8 @@
 		A2FCB35018A1CCB100459694 /* Intentions */ = {
 			isa = PBXGroup;
 			children = (
-				A2FCB35118A1CCCF00459694 /* EnterEmailIntention.h */,
-				A2FCB35218A1CCCF00459694 /* EnterEmailIntention.m */,
-				A2FCB35418A1CCFE00459694 /* SaveEmailIntention.h */,
-				A2FCB35518A1CCFE00459694 /* SaveEmailIntention.m */,
+				A2FCB35118A1CCCF00459694 /* SignUpIntention.h */,
+				A2FCB35218A1CCCF00459694 /* SignUpIntention.m */,
 			);
 			name = Intentions;
 			sourceTree = "<group>";
@@ -302,11 +297,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A2FCB35618A1CCFE00459694 /* SaveEmailIntention.m in Sources */,
 				A2FCB32D18A1CBF900459694 /* MasterViewController.m in Sources */,
 				A2FCB36018A1D57100459694 /* CoreDataConnection.m in Sources */,
 				A2FCB35A18A1CD2F00459694 /* PersonProxy.m in Sources */,
-				A2FCB35318A1CCCF00459694 /* EnterEmailIntention.m in Sources */,
+				A2FCB35318A1CCCF00459694 /* SignUpIntention.m in Sources */,
 				A2FCB32418A1CBF900459694 /* AppDelegate.m in Sources */,
 				A2FCB32018A1CBF900459694 /* main.m in Sources */,
 				A2FCB32A18A1CBF900459694 /* Intentional.xcdatamodeld in Sources */,
@@ -518,6 +512,7 @@
 				A2FCB34B18A1CBF900459694 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A2FCB34C18A1CBF900459694 /* Build configuration list for PBXNativeTarget "IntentionalTests" */ = {
 			isa = XCConfigurationList;
@@ -526,6 +521,7 @@
 				A2FCB34E18A1CBF900459694 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

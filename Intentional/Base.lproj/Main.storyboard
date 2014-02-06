@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13B3116" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="rS3-R9-Ivy">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="rS3-R9-Ivy">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
     </dependencies>
@@ -47,7 +47,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="saveTapped:" destination="t68-lJ-dpy" eventType="touchUpInside" id="KkX-Pc-yCJ"/>
+                                    <action selector="saveTapped:" destination="kLz-XJ-1jr" eventType="touchUpInside" id="wIt-FZ-NEJ"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -62,14 +62,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GMb-FM-awQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <customObject id="T0S-ZF-JlM" customClass="PersonProxy"/>
-                <customObject id="kLz-XJ-1jr" customClass="EnterEmailIntention">
+                <customObject id="kLz-XJ-1jr" customClass="SignUpIntention">
                     <connections>
                         <outlet property="personProxy" destination="T0S-ZF-JlM" id="V0B-EN-Ggr"/>
-                    </connections>
-                </customObject>
-                <customObject id="t68-lJ-dpy" customClass="SaveEmailIntention">
-                    <connections>
-                        <outlet property="personProxy" destination="T0S-ZF-JlM" id="7UD-Mt-3Bf"/>
                     </connections>
                 </customObject>
             </objects>
