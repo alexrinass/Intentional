@@ -7,14 +7,10 @@
 //
 
 #import "MasterViewController.h"
-
 #import "PersonProxy.h"
 #import "SignUpIntention.h"
 
-@interface MasterViewController () <UITextFieldDelegate>
-@property (strong, nonatomic) IBOutlet PersonProxy *personProxy;
-@property (strong, nonatomic) IBOutlet SignUpIntention *signUpIntention;
-@property (weak, nonatomic) IBOutlet UIButton *saveButton;
+@interface MasterViewController ()
 @end
 
 @implementation MasterViewController

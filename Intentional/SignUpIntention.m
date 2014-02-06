@@ -10,7 +10,6 @@
 #import "PersonProxy.h"
 
 @interface SignUpIntention () 
-@property (weak, nonatomic) IBOutlet PersonProxy *personProxy;
 @end
 
 @implementation SignUpIntention
